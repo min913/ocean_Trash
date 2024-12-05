@@ -23,7 +23,7 @@ X = dis.drop(columns=['IEM_CNT'])
 y = np.log1p(dis['IEM_CNT'])  # 로그 변환
 
 # 데이터 분할
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 lgbm_model = LGBMRegressor(
     n_estimators=600,
     learning_rate=0.01,
